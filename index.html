@@ -234,6 +234,76 @@ function keisan(){
 		<td><input type="text" name="field_totalLetter" size="8" value="0"></td>
 	</tr>
 
+=======
+<tr>
+<th>項目</th>
+<th>タイプ</th>
+</tr>
+<tr>
+<td>石割り回数</td>
+<td><select name="Pyroxene" onChange="keisan()">
+<option value="0">1日の石割り回数を選択してください</option>
+<option value="0">0回/day</option>
+<option value="360">3回/day</option>
+<option value="720">6回/day</option>
+<option value="1080">9回/day</option>
+<option value="1440">12回/day</option>
+<option value="1800">15回/day</option>
+<option value="2160">18回/day</option>
+<option value="2400">20回/day</option>
+</select></td>
+</tr>
+<tr>
+<td>AP回復ドリンク</td>
+<td><select name="Drink" onChange="keisan()">
+<option value="0">APドリンク購入回数を選択してください</option>
+<option value="0">0</option>
+<option value="90">1</option>
+<option value="180">2</option>
+<option value="270">3</option>
+<option value="360">4</option>
+</select></td>
+</tr>
+<tr>
+<td>カフェランク</td>
+<td><select name="Cafe" onChange="keisan()">
+<option value="0">カフェランクを選択してください</option>
+<option value="90">1</option>
+<option value="150">2</option>
+<option value="220">3</option>
+<option value="300">4</option>
+<option value="390">5</option>
+<option value="460">6(最大)</option>
+</select></td>
+</tr>
+<tr>
+	<td>サークル</td>
+	<td>
+		<select name="Circle" onChange="keisan()">
+			<option value="0">サークルに加入していますか</option>
+			<option value="10">している</option>
+			<option value="0">していない</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>スタミナパック</td>
+	<td>
+		<select name="StaminaPack" onChange="keisan()">
+			<option value="0">スタミナパックを購入していますか</option>
+			<option value="150">している</option>
+			<option value="0">していない</option>
+		</select>
+	</td>
+</tr>
+<tr>
+<td align="right">1日のAP回復量</td>
+<td><input type="text" name="field_DalyAP" size="8" value="0"> AP</td>
+</tr>
+<tr>
+<td align="right">1週間のAP回復量</td>
+<td><input type="text" name="field_WeeklyAP" size="8" value="0"> AP</td>
+</tr>
 </table>
 
 </form>
