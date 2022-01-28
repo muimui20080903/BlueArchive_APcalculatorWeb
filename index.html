@@ -159,6 +159,7 @@ function keisan(){
 
 <!-- 中身が変わる -->
 <div class="tweet-text" id="tweet-text">
+むいむい
     <!-- ここのテキストをツイートしたい -->
 </div>
 
@@ -170,7 +171,7 @@ function keisan(){
         // オプションパラメータを設定
 	let hashtags = "ブルアカ";
         let hashtags2 = "BlueArchiveAP計算機"
-        let url = https://muimui20080903.github.io/BlueArchive_APcalculatorWeb/  // location.hrefは今いるURL
+        let url = encodeURIComponent(location.href)  // location.hrefは今いるURL
 
         // URLを生成して遷移
         window.open("https://twitter.com/share?text=" + text + "&hashtags=" + hashtags + "&hashtags=" + hashtags2 + "&url=" + url);
