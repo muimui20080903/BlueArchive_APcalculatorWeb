@@ -1,0 +1,282 @@
+
+<!-- saved from url=(0209)https://satokitest.htmlbin.net/kusa.html?Pyroxene=0&Drink=0&Cafe=0&Circle=0&StaminaPack=0&field_DalyAP=0&field_WeeklyAP=0&Days=0&Week=0&field_totalAP=0&Q12=0&field_Wakamo=0&field_totalPt=0&field_totalLetter=0# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>BlueArchive APcalculator</title>
+  
+<script type="text/javascript">
+<!--
+
+function keisan(){
+
+	// 設定開始
+
+	// 石割り
+    var Pyroxene = document.form1.Pyroxene.options[document.form1.Pyroxene.selectedIndex].value;
+
+	// APドリンク
+	var Drink = document.form1.Drink.options[document.form1.Drink.selectedIndex].value;
+
+	// カフェランク
+	var Cafe = document.form1.Cafe.options[document.form1.Cafe.selectedIndex].value;
+
+	// サークル
+	var Circle = document.form1.Circle.options[document.form1.Circle.selectedIndex].value;
+
+	// スタミナパック
+	var StaminaPack = document.form1.StaminaPack.options[document.form1.StaminaPack.selectedIndex].value;
+
+	//設定完了
+
+	// 1日、1週間のAP回復量を計算
+	var DalyAP = 240 + 150 + parseInt(Pyroxene) + parseInt(Drink) + parseInt(Cafe) + parseInt(Circle) + parseInt(StaminaPack);
+	var WeeklyAP = 7 * parseInt(DalyAP) + 350;
+
+    document.form1.field_DalyAP.value = DalyAP; // 1日のAP回復量を表示
+
+	document.form1.field_WeeklyAP.value = WeeklyAP; // 1週間のAP回復量を表示
+
+
+	//以下バレンタインイベ計算用
+	//設定開始
+
+	//日数
+	var Days = document.form1.Days.options[document.form1.Days.selectedIndex].value;
+	//ウィークリーミッション
+	var Week = document.form1.Week.options[document.form1.Week.selectedIndex].value;
+
+	//AP合計
+	var totalAP = parseInt(Days) * parseInt(DalyAP) + parseInt(Week);
+	document.form1.field_totalAP.value = totalAP; // 総AP回復量を表示
+
+	//Quest12のボーナスポイント数
+	var Q12 = document.form1.Q12.options[document.form1.Q12.selectedIndex].value;
+
+	//ワカモの総出現回数
+	var wakamo = 8 * parseInt(Days)
+	document.form1.field_Wakamo.value = wakamo; // ワカモの総出現回数を表示
+
+	//イベントPt総取得数
+	var totalPt = 120 * parseInt(wakamo) + (parseInt(totalAP) / 20) * parseInt(Q12);
+	document.form1.field_totalPt.value = totalAP;
+
+	//交換できるバレンタインデーのお誘い
+	var totalLetter = parseInt(totalPt) / 750;
+	document.form1.field_totalLetter.value = totalLetter;
+
+	//設定終了
+}
+// --> 
+</script> 
+<!-- FontAwesome5.1のCDN -->
+<link rel="stylesheet" href="./satoki_BlueArchive APcalculator_files/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+
+<form action="https://satokitest.htmlbin.net/kusa.html?Pyroxene=0&amp;Drink=0&amp;Cafe=0&amp;Circle=0&amp;StaminaPack=0&amp;field_DalyAP=0&amp;field_WeeklyAP=0&amp;Days=0&amp;Week=0&amp;field_totalAP=0&amp;Q12=0&amp;field_Wakamo=0&amp;field_totalPt=0&amp;field_totalLetter=0#" name="form1">
+	<table>
+		<tbody><tr>
+			<th>項目</th>
+			<th>タイプ</th>
+		</tr>
+		<tr>
+			<td>石割り回数</td>
+			<td>
+				<select name="Pyroxene" onchange="keisan()">
+					<option value="0">1日の石割り回数を選択してください</option>
+					<option value="0">0回/day</option>
+					<option value="360">3回/day</option>
+					<option value="720">6回/day</option>
+					<option value="1080">9回/day</option>
+					<option value="1440">12回/day</option>
+					<option value="1800">15回/day</option>
+					<option value="2160">18回/day</option>
+					<option value="2520">20回/day</option><!-- 計算あってる？ -->&gt;
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>AP回復ドリンク</td>
+			<td>
+				<select name="Drink" onchange="keisan()">
+					<option value="0">APドリンク購入回数を選択してください</option>
+					<option value="0">0</option>
+					<option value="90">1</option>
+					<option value="180">2</option>
+					<option value="270">3</option>
+					<option value="360">4(最大)</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>カフェランク</td>
+			<td>
+				<select name="Cafe" onchange="keisan()">
+					<option value="0">カフェランクを選択してください</option>
+					<option value="90">1</option>
+					<option value="150">2</option>
+					<option value="220">3</option>
+					<option value="300">4</option>
+					<option value="390">5</option>
+					<option value="460">6(最大)</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>サークル</td>
+			<td>
+				<select name="Circle" onchange="keisan()">
+					<option value="0">サークルに加入していますか</option>
+					<option value="10">している</option>
+					<option value="0">していない</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>スタミナパック</td>
+			<td>
+				<select name="StaminaPack" onchange="keisan()">
+					<option value="0">スタミナパックを購入していますか</option>
+					<option value="150">している</option>
+					<option value="0">していない</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">1日のAP回復量</td>
+			<td><input type="text" name="field_DalyAP" size="8" value="0"> AP</td>
+		</tr>
+		<tr>
+			<td align="right">1週間のAP回復量</td>
+			<td><input type="text" name="field_WeeklyAP" size="8" value="0"> AP</td>
+		</tr>
+	</tbody></table>
+
+<style>
+div.tweet button {
+    /* font-family: serif; */
+    text-align: end;
+    border: none;
+    background-color: #1DA1F2;
+    padding: 3px 16px;
+    border-radius: 100vh;
+    color: white;
+    cursor: pointer;
+}
+</style>
+
+<!--Twitterボタン-->
+<div class="tweet" id="tweet">
+    <button id="twitter-share-button"><i class="fab fa-twitter"></i>ツイートする</button>
+    <script async="" src="./satoki_BlueArchive APcalculator_files/widgets.js.ダウンロード" charset="utf-8"></script>
+</div>
+
+
+<script>// ツイートボタン押下時にテキストを動的に変更してツイート
+    document.getElementById("twitter-share-button").onclick = function () {
+        // オプションパラメータを設定
+        let hashtags = "ブルアカ";
+        let hashtags2 = "BlueArchiveAP計算機"
+        let url = location.href.replace(/\?.*$/,"")+"\n"  // location.hrefは今いるURL
+
+        //isi
+        var isi = document.form1.Pyroxene.options[document.form1.Pyroxene.selectedIndex].text
+		//これをまねる
+
+        text = "石割り回数："+isi+"\n"
+		+"AP回復ドリンク：4（最大）\n"
+		+"カフェランク：6（最大）\n"
+		+"サークル：している\n"
+		+"スタミナパック：している\n\n"
+		+"1日のAP回復量　：1730 AP\n"
+		+"1週間のAP回復量：12460 AP\n"
+
+        // URLを生成して遷移
+        window.open("https://twitter.com/share?text=" + encodeURI(text) + "&hashtags=" + hashtags + "&hashtags=" + hashtags2 + "&url=" + url, "_blank");
+    }</script>
+<!--バレンタインイベント チョコ個数計算用-->
+========================================<br>
+ワカモの出現回数は調整中で常に8回/dayになっています<br>
+
+<table>
+	<tbody><tr>
+		<td>バレンタインイベントの残り日数</td>
+		<td>
+			<select name="Days" onchange="keisan()">
+				<option value="0">残り日数を選択してください（～2/9メンテナンス前まで）</option>
+				<option value="1">1日</option>
+				<option value="2">2日</option>
+				<option value="3">3日</option>
+				<option value="4">4日</option>
+				<option value="5">5日</option>
+				<option value="6">6日</option>
+				<option value="7">7日</option>
+				<option value="8">8日</option>
+				<option value="9">9日</option>
+				<option value="10">10日</option>
+				<option value="11">11日</option>
+				<option value="12">12日</option>
+				<option value="13">13日</option>
+				<option value="14">14日</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>ウィークリーミッション（350AP/Week）</td>
+		<td>
+			<select name="Week" onchange="keisan()">
+				<option value="0">取得できるウィークリーミッションの回数を選択してください</option>
+				<option value="0">0回</option>
+				<option value="350">1回</option>
+				<option value="700">2回</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>AP総量</td>
+		<td><input type="text" name="field_totalAP" size="8" value="0">AP</td>
+	</tr>
+	<tr>
+		<td>Quest12のボーナスポイント数</td>
+		<td>
+			<select name="Q12" onchange="keisan()">
+				<option value="0">イベントPtのボーナス数を選択してください</option>
+				<option value="16">0(合計16Pt)</option>
+				<option value="17">1(合計17Pt)</option>
+				<option value="18">2(合計18Pt)</option>
+				<option value="19">3(合計19Pt)</option>
+				<option value="20">4(合計20Pt)</option>
+				<option value="21">5(合計21Pt)</option>
+				<option value="22">6(合計22Pt)</option>
+				<option value="23">7(合計23Pt)</option>
+				<option value="24">8(合計24Pt)</option>
+				<option value="25">9(合計25Pt)</option>
+				<option value="26">10(合計26Pt)</option>
+				<option value="27">11(合計27Pt)</option>
+				<option value="28">12(合計28Pt)</option>
+				<option value="29">13(合計29Pt)</option>
+				<option value="30">14(合計30Pt)</option>
+				<option value="31">15(合計31Pt)</option>
+				<option value="32">16(合計32Pt)（最大）</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>ワカモの総出現回数</td>
+		<td><input type="text" name="field_Wakamo" size="8" value="0">回</td>
+	</tr>
+	<tr>
+		<td>イベントPt総取得数</td>
+		<td><input type="text" name="field_totalPt" size="8" value="0">Pt</td>
+	</tr>
+	<tr>
+		<td>交換できるバレンタインデーのお誘い（最大68人）</td>
+		<td><input type="text" name="field_totalLetter" size="8" value="0"></td>
+	</tr>
+
+</tbody></table>
+
+</form>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./satoki_BlueArchive APcalculator_files/widget_iframe.8f764d5bd2778f88121d31d7d8d8e1e3.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./satoki_BlueArchive APcalculator_files/saved_resource.html"></iframe></body></html>
