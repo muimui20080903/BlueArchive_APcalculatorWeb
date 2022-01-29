@@ -195,13 +195,13 @@
 			//pack
 			var pack = document.form1.StaminaPack.options[document.form1.StaminaPack.selectedIndex].text
 
-			text = "石割り回数：" + isi + "\n"
-				+ "AP回復ドリンク：" + apdrink + "\n"
-				+ "カフェランク：" + caferank + "\n"
-				+ "サークル：" + cir + "\n"
-				+ "スタミナパック：" + pack + "\n\n"
-				+ "1日のAP回復量　：" + DalyAP + " AP\n"
-				+ "1週間のAP回復量：" + WeeklyAP + " AP\n"
+			text ="石割り回数："+isi+"\n"
+				+"AP回復ドリンク："+apdrink+"\n"
+				+"カフェランク："+caferank+"\n"
+				+"サークル："+cir+"\n"
+				+"スタミナパック："+pack+"\n\n"
+				+"1日のAP回復量　："+DalyAP+" AP\n"
+				+"1週間のAP回復量："+WeeklyAP+" AP\n"
 
 			// URLを生成して遷移
 			window.open("https://twitter.com/share?text=" + encodeURI(text) + "&hashtags=" + hashtags + "&hashtags=" + hashtags2 + "&url=" + url, "_blank");
