@@ -6,30 +6,38 @@
 	<script type="text/javascript">
 <!--
 
+        var Pyroxene;
+        var Drink;
+        var Cafe;
+        var Circle;
+        var StaminaPack;
+        var DalyAP;
+		var WeeklyAP;
+
 		function keisan() {
 
 			// 設定開始
 
 			// 石割り
-			var Pyroxene = document.form1.Pyroxene.options[document.form1.Pyroxene.selectedIndex].value;
+			Pyroxene = document.form1.Pyroxene.options[document.form1.Pyroxene.selectedIndex].value;
 
 			// APドリンク
-			var Drink = document.form1.Drink.options[document.form1.Drink.selectedIndex].value;
+			Drink = document.form1.Drink.options[document.form1.Drink.selectedIndex].value;
 
 			// カフェランク
-			var Cafe = document.form1.Cafe.options[document.form1.Cafe.selectedIndex].value;
+			Cafe = document.form1.Cafe.options[document.form1.Cafe.selectedIndex].value;
 
 			// サークル
-			var Circle = document.form1.Circle.options[document.form1.Circle.selectedIndex].value;
+			Circle = document.form1.Circle.options[document.form1.Circle.selectedIndex].value;
 
 			// スタミナパック
-			var StaminaPack = document.form1.StaminaPack.options[document.form1.StaminaPack.selectedIndex].value;
+			StaminaPack = document.form1.StaminaPack.options[document.form1.StaminaPack.selectedIndex].value;
 
 			//設定完了
 
 			// 1日、1週間のAP回復量を計算
-			var DalyAP = 240 + 150 + parseInt(Pyroxene) + parseInt(Drink) + parseInt(Cafe) + parseInt(Circle) + parseInt(StaminaPack);
-			var WeeklyAP = 7 * parseInt(DalyAP) + 350;
+			DalyAP = 240 + 150 + parseInt(Pyroxene) + parseInt(Drink) + parseInt(Cafe) + parseInt(Circle) + parseInt(StaminaPack);
+			WeeklyAP = 7 * parseInt(DalyAP) + 350;
 
 			document.form1.field_DalyAP.value = DalyAP; // 1日のAP回復量を表示
 
