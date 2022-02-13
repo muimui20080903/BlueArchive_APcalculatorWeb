@@ -80,7 +80,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></head>
 <body>
 
-	<form action ="#" name="form1">
+	<form action="#" name="form1">
 		<table>
 			<tbody>
 				<tr>
@@ -162,15 +162,15 @@
 		</table>
 
 		<style>
-		div.tweet button {
-			/* font-family: serif; */
-			text-align: end;
-			border: none;
-			background-color: #1DA1F2;
-			padding: 3px 16px;
-			border-radius: 100vh;
-			color: white;
-			cursor: pointer;
+			div.tweet button {
+				/* font-family: serif; */
+				text-align: end;
+				border: none;
+				background-color: #1DA1F2;
+				padding: 3px 16px;
+				border-radius: 100vh;
+				color: white;
+				cursor: pointer;
 			}
 		</style>
 
@@ -181,40 +181,40 @@
 		</div>
 
 		<script>
-// ツイートボタン押下時にテキストを動的に変更してツイート
-		document.getElementById("twitter-share-button").onclick = function () {
-			// オプションパラメータを設定
-			let hashtags = "ブルアカ";
-			let hashtags2 = "BlueArchiveAP計算機"
-			let url = location.href.replace(/\?.*$/, "") + "\n"  // location.hrefは今いるURL
+			// ツイートボタン押下時にテキストを動的に変更してツイート
+			document.getElementById("twitter-share-button").onclick = function () {
+				// オプションパラメータを設定
+				let hashtags = "ブルアカ";
+				let hashtags2 = "BlueArchiveAP計算機"
+				let url = location.href.replace(/\?.*$/, "") + "\n"  // location.hrefは今いるURL
 
-			//isi
-			var isi = document.form1.Pyroxene.options[document.form1.Pyroxene.selectedIndex].text
-			//これをまねる
+				//isi
+				var isi = document.form1.Pyroxene.options[document.form1.Pyroxene.selectedIndex].text
+				//これをまねる
 
-			//apdrink
-			var apdrink = document.form1.Drink.options[document.form1.Drink.selectedIndex].text
+				//apdrink
+				var apdrink = document.form1.Drink.options[document.form1.Drink.selectedIndex].text
 
-			//caferank
-			var caferank = document.form1.Cafe.options[document.form1.Cafe.selectedIndex].text
+				//caferank
+				var caferank = document.form1.Cafe.options[document.form1.Cafe.selectedIndex].text
 
-			//cir
-			var cir = document.form1.Circle.options[document.form1.Circle.selectedIndex].text
+				//cir
+				var cir = document.form1.Circle.options[document.form1.Circle.selectedIndex].text
 
-			//pack
-			var pack = document.form1.StaminaPack.options[document.form1.StaminaPack.selectedIndex].text
+				//pack
+				var pack = document.form1.StaminaPack.options[document.form1.StaminaPack.selectedIndex].text
 
-			text ="石割り回数："+isi+"\n"
-				+"AP回復ドリンク："+apdrink+"\n"
-				+"カフェランク："+caferank+"\n"
-				+"サークル："+cir+"\n"
-				+"スタミナパック："+pack+"\n\n"
-				+"1日のAP回復量　："+DalyAP+" AP\n"
-				+"1週間のAP回復量："+WeeklyAP+" AP\n"
+				text = "石割り回数：" + isi + "\n"
+					+ "AP回復ドリンク：" + apdrink + "\n"
+					+ "カフェランク：" + caferank + "\n"
+					+ "サークル：" + cir + "\n"
+					+ "スタミナパック：" + pack + "\n\n"
+					+ "1日のAP回復量　：" + DalyAP + " AP\n"
+					+ "1週間のAP回復量：" + WeeklyAP + " AP\n"
 
-			// URLを生成して遷移
-			window.open("https://twitter.com/share?text=" + encodeURI(text) + "&hashtags=" + hashtags + "&hashtags=" + hashtags2 + "&url=" + url, "_blank");
-		}</script>
+				// URLを生成して遷移
+				window.open("https://twitter.com/share?text=" + encodeURI(text) + "&hashtags=" + hashtags + "&hashtags=" + hashtags2 + "&url=" + url, "_blank");
+			}</script>
 
 		<!--バレンタインイベント チョコ個数計算用-->
 		<!--
@@ -302,5 +302,10 @@
 		</table>
 		-->
 	</form>
+
+	<!--ブルーアーカイブ（ブルアカ）攻略有志Wikiへのリンク-->
+	<a href="https://bluearchive.wikiru.jp/" target="_blank"><img src="https://bluearchive.wikiru.jp/image/pukiwiki.png"></a>
+	ブルーアーカイブ（ブルアカ）攻略有志Wiki
+
 </body>
 </html>
